@@ -1,0 +1,59 @@
+.lateralMenu {
+  display: flex;
+  margin-left: 1%;
+  height: 98.5vh;
+  width: auto;
+  flex-direction: column;
+  overflow: auto;
+  align-items: space-between;
+  border: 1px solid var(--backGroundColor);
+  border-right: 1px solid var(--detailColor);
+}
+
+.players {
+  height: 15%;
+  width: 100%;
+}
+
+ul {
+  margin-left: 3vh;
+  font-size: 2.6vh;
+}
+
+li {
+  margin-bottom: 2%;
+  list-style: disc;
+}
+
+.li1 {
+  color: var(--player1);
+}
+
+.li2 {
+  color: var(--player2);
+}
+
+.li3 {
+  color: var(--player3);
+}
+
+.li4 {
+  color: var(--player4);
+}
+
+.resources{
+  border: 1px solid var(--backGroundColor);
+  border-top: 1px solid var(--detailColor);
+  height: 40%;
+  width: 98%;
+}
+.teamResource{
+  border: 1px solid var(--backGroundColor);
+  border-top: 1px solid var(--detailColor);
+  height: 40%;
+  width: 98%;
+}
+.lateralMenuButton{
+  height: 5%;
+  width: 98%;
+}

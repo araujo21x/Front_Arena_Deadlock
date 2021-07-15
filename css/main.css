@@ -1,0 +1,32 @@
+:root {
+  --primaryColor: #62B0CB;
+  --primaryColorHover: #479ebb;
+  --errorColor: #ee8c73;
+  --errorColorHover: #e48066;
+  --compatible: #50c740;
+  --incompatible: #dad608;
+  --primaryFontColor: #dfe3e8;
+  --secondaryFontColor: #000000;
+  --backGroundColor: #f4f5f6;
+  --detailColor: #afafaf;
+  --player1: #50c740;
+  --player2: #e48066;
+  --player3: #faa200;
+  --player4: #1900f7;
+}
+
+body{
+  background-color: var(--backGroundColor);
+  margin: 0.1%;
+}
+
+.main {
+  display: grid;
+  grid-template-areas:
+    'gameZone'
+    'lateralMenu'
+  ;
+  grid-template-columns: 22% 78%;
+  grid-template-rows: auto;
+  padding: 3px;
+}
