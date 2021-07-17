@@ -59,6 +59,7 @@
   width: 18vh;
   font-size: 3vh;
   border-radius: 50%;
+  box-shadow: 3px 2px 2px #62b1cbd0;
 }
 
 .button_to_play:hover {

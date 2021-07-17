@@ -41,19 +41,61 @@ li {
   color: var(--player4);
 }
 
-.resources{
+.resources {
   border: 1px solid var(--backGroundColor);
   border-top: 1px solid var(--detailColor);
   height: 40%;
   width: 98%;
 }
-.teamResource{
+
+.teamResource {
   border: 1px solid var(--backGroundColor);
   border-top: 1px solid var(--detailColor);
   height: 40%;
   width: 98%;
 }
-.lateralMenuButton{
+
+.lateralMenuButton {
   height: 5%;
   width: 98%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonExit {
+  width: 50%;
+  height: 90%;
+  font-family: 'Mulish', sans-serif;
+  font-weight: bold;
+  font-size: 3vh;
+  color: var(--primaryFontColor);
+  border-radius: 5px;
+  border: none;
+  background-color: var(--errorColor);
+  box-shadow: 3px 2px 2px #ee8065;
+}
+
+.buttonExit:hover {
+  background-color: var(--errorColorHover);
+}
+
+.h1Resources {
+  margin-top: 0.5vh;
+  text-align: center;
+  font-size: 3vh;
+}
+
+.resourcesList {
+  width: 100%;
+  height: 78%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.resourcesItem {
+  height: 10vh;
+  width: auto;
 }
