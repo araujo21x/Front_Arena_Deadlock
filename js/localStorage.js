@@ -35,3 +35,7 @@ export function getPlayers(){
 export function getGameStatusGenerally(){
   return localStorage.getItem('gameStatusGenerally');
 }
+
+export function getIdPlayer(){
+  return localStorage.getItem('idPlayer');
+}

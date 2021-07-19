@@ -60,3 +60,13 @@ export function playButton() {
     document.getElementsByClassName('button_to_play')[0].disabled = true;
   }
 }
+
+export function updatePosition(){
+  const player = getPlayers();
+  for(let i = 1; i <= 4; i++){
+    const piece = document.getElementById(`player${i}`);
+    const currentPosition = player[`player${i}`].currentPosition;
+    const newPosition = document.getElementsByClassName(`zone_${i}_${currentPosition}`)[0];
+    newPosition.appendChild(piece);
+  }
+}
