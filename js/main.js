@@ -1,7 +1,7 @@
 import { startingGame, startingMyGame } from './localStorage.js';
 import { attPlayersName, attResources, playButton} from './game.js';
 
-const socket = io('http://localhost:3000');
+const socket = io('https://arenadead.herokuapp.com/');
 
 const button = document.getElementById('buttonModal');
 button.addEventListener('click', () => {
