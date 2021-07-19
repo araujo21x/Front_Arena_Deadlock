@@ -9,41 +9,53 @@
   <link rel="stylesheet" href="css/lateralMenu.css">
   <link rel="stylesheet" href="css/gameZone.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/modal.css">
   <title>Arena Deadlock</title>
 </head>
 
 <body>
+  <div id='modal' class='modalContainer'>
+    <section class="modal">
+      <h1>Coloque seu nome</h1>
+      <form action="">
+        <input type="text" id="name" name="name">
+      </form>
+      <button id="buttonModal">Confirmar</button>
+    </section>
+  </div>
+
   <section class='main'>
+
     <section class='lateralMenu'>
       <section class='players'>
         <ul>
-          <li class='li1'>Jogador 1 <section></section>
+          <li id='namePlayer1' class='li1'>Jogador 1 <section></section>
           </li>
-          <li class='li2'>Jogador 2</li>
-          <li class='li3'>Jogador 3</li>
-          <li class='li4'>Jogador 4</li>
+          <li id='namePlayer2' class='li2'>Jogador 2</li>
+          <li id='namePlayer3' class='li3'>Jogador 3</li>
+          <li id='namePlayer4' class='li4'>Jogador 4</li>
         </ul>
       </section>
       <section class='resources'>
         <h1 class='h1Resources'>Recursos Disponíveis</h1>
-        <section class='resourcesList'>
-          <img class='resourcesItem' src='img/resource.png'>
-          <img class='resourcesItem' src='img/resource.png'>
-          <img class='resourcesItem' src='img/resource.png'>
-          <img class='resourcesItem' src='img/resource.png'>
-          <img class='resourcesItem' src='img/resource.png'>
-          <img class='resourcesItem' src='img/resource.png'>
+        <section id='allResources' class='resourcesList'>
+          <img id="allResource1" class='resourcesItem' src='img/resource1.webp'>
+          <img id="allResource2" class='resourcesItem' src='img/resource2.webp'>
+          <img id="allResource3" class='resourcesItem' src='img/resource3.webp'>
+          <img id="allResource4" class='resourcesItem' src='img/resource4.webp'>
+          <img id="allResource5" class='resourcesItem' src='img/resource5.webp'>
+          <img id="allResource6" class='resourcesItem' src='img/resource6.webp'>
         </section>
       </section>
       <section class='teamResource'>
         <h1 class='h1Resources'>Recursos do meu time</h1>
-        <section class='resourcesList'>
-          <img class='resourcesItem' src='img/resource.png'>
-          <img class='resourcesItem' src='img/resource.png'>
-          <img class='resourcesItem' src='img/resource.png'>
-          <img class='resourcesItem' src='img/resource.png'>
-          <img class='resourcesItem' src='img/resource.png'>
-          <img class='resourcesItem' src='img/resource.png'>
+        <section id='myResources' class='resourcesList'>
+          <img id="myResource1" style="display:none" class='resourcesItem' src='img/resource1.webp'>
+          <img id="myResource2" style="display:none" class='resourcesItem' src='img/resource2.webp'>
+          <img id="myResource3" style="display:none" class='resourcesItem' src='img/resource3.webp'>
+          <img id="myResource4" style="display:none" class='resourcesItem' src='img/resource4.webp'>
+          <img id="myResource5" style="display:none" class='resourcesItem' src='img/resource5.webp'>
+          <img id="myResource6" style="display:none" class='resourcesItem' src='img/resource6.webp'>
         </section>
       </section>
       <section class='lateralMenuButton'>
@@ -52,7 +64,7 @@
     </section>
     <section class='gameZone'>
       <section class='zone_1_1'>
-        <section class='player1'></section>
+        <section id='player1' class='player1'></section>
       </section>
       <section class='zone_1_2'></section>
       <section class='zone_1_3'></section>
@@ -80,7 +92,7 @@
       <section class='zone_1_25'></section>
       <!-- zone 2 -->
       <section class='zone_2_1'>
-        <section class='player2'></section>
+        <section id='player2' class='player2'></section>
       </section>
       <section class='zone_2_2'></section>
       <section class='zone_2_3'></section>
@@ -108,7 +120,7 @@
       <section class='zone_2_25'></section>
       <!-- zone 3 -->
       <section class='zone_3_1'>
-        <section class='player3'></section>
+        <section id='player3' class='player3'></section>
       </section>
       <section class='zone_3_2'></section>
       <section class='zone_3_3'></section>
@@ -136,7 +148,7 @@
       <section class='zone_3_25'></section>
       <!-- zone 4 -->
       <section class='zone_4_1'>
-        <section class='player4'></section>
+        <section id='player4' class='player4'></section>
       </section>
       <section class='zone_4_2'></section>
       <section class='zone_4_3'></section>
@@ -164,7 +176,7 @@
       <section class='zone_4_25'></section>
 
       <section class='button_zone'>
-        <button class='button_to_play'>Jogar</button>
+        <button disabled class='button_to_play'>Jogar</button>
       </section>
 
       <section class='code_zone'>
@@ -176,6 +188,8 @@
 </body>
 
 <script type='module' src='js/main.js'></script>
-<script src="https://cdn.socket.io/3.1.3/socket.io.min.js" integrity="sha384-cPwlPLvBTa3sKAgddT6krw0cJat7egBga3DJepJyrLl4Q9/5WLra3rrnMcyTyOnh" crossorigin="anonymous"></script>
+<script src="https://cdn.socket.io/3.1.3/socket.io.min.js"
+  integrity="sha384-cPwlPLvBTa3sKAgddT6krw0cJat7egBga3DJepJyrLl4Q9/5WLra3rrnMcyTyOnh" crossorigin="anonymous"></script>
+
 
 </html>

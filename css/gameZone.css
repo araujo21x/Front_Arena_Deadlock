@@ -65,6 +65,10 @@
 .button_to_play:hover {
   background-color: var(--primaryColorHover);
 }
+.button_to_play:disabled {
+  background-color: var(--errorColor);
+  box-shadow: 3px 2px 2px var(--errorColorHover);
+}
 
 .zone_1_1 {
   display: flex;
