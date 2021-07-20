@@ -11,7 +11,7 @@ import {
   updatePosition
 } from './game.js';
 
-const socket = io('https://arenadead.herokuapp.com/', { transports: ['websocket', 'polling', 'flashsocket'] });
+const socket = io('http://127.0.0.1:3000/', { transports: ['websocket', 'polling', 'flashsocket'] });
 
 const button = document.getElementById('buttonModal');
 button.addEventListener('click', () => {
