@@ -48,15 +48,12 @@ export function playButton() {
   const statusGame = getGameStatusGenerally();
 
   if (statusGame === 'inGame') {
-    console.log(players[myPlayer]);
     if (players[myPlayer].gameStatus === 'playing') {
       document.getElementsByClassName('button_to_play')[0].disabled = false;
     } else {
-      console.log('desativado1')
       document.getElementsByClassName('button_to_play')[0].disabled = true;
     }
   } else {
-    console.log('desativado2')
     document.getElementsByClassName('button_to_play')[0].disabled = true;
   }
 }

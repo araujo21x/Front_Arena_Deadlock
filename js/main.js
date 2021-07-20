@@ -11,7 +11,7 @@ import {
   updatePosition
 } from './game.js';
 
-const socket = io('https://arenadead.herokuapp.com/');
+const socket = io('https://arenadead.herokuapp.com/', { transports: ['websocket', 'polling', 'flashsocket'] });
 
 const button = document.getElementById('buttonModal');
 button.addEventListener('click', () => {
@@ -30,6 +30,7 @@ function addPlayer() {
 function toPlay() {
   const game = getMyPlayer();
   const idPlayer = getIdPlayer();
+
   socket.emit('toPlay', { idRoom: 'teste01', idPlayer, game });
 }
 
@@ -43,6 +44,7 @@ socket.on('enterRoomAll', (arg) => {
 socket.on('enterRoomPersonal', (arg) => { startingMyGame(arg) });
 
 socket.on('toPlay', (arg) => {
+  console.log(arg)
   startingGame(arg);
   attResources();
   playButton();
