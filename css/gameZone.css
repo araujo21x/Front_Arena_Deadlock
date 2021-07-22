@@ -970,3 +970,27 @@
   grid-column: 45/ 49;
   grid-row: 97/ 101;
 }
+
+.diceZone {
+  display: flex;
+  flex-direction: row;
+  grid-column: 60/ 90;
+  grid-row: 78/ 96;
+}
+
+.timeDiceZone {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  align-items: center;
+  font-family: 'Mulish', sans-serif;
+  font-weight: bold;
+  font-size: 2vh;
+}
+.diceZone img{
+  display: none;
+  margin-top: 2%;
+  width: 15vh;
+  height: auto;
+}

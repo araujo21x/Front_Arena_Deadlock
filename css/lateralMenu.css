@@ -13,6 +13,7 @@
 .players {
   height: 15%;
   width: 100%;
+  margin-bottom: 2%;
 }
 
 ul {
@@ -21,8 +22,17 @@ ul {
 }
 
 li {
+  display: flex;
+  align-items: center;
   margin-bottom: 2%;
   list-style: disc;
+}
+
+li img{
+  display: none;
+  margin-left: 2%;
+  width: 1.4rem;
+  height: auto;
 }
 
 .li1 {
