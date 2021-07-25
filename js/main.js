@@ -8,10 +8,16 @@ import {
   attPlayersName,
   attResources,
   playButton,
-  updatePosition
+  updatePosition,
+  playersPlaying,
+  currentDice
 } from './game.js';
 
-const socket = io('https://arenadead.herokuapp.com/', { transports: ['websocket', 'polling', 'flashsocket'] });
+// const socket = io('https://arenadead.herokuapp.com/',
+//   { transports: ['websocket', 'polling', 'flashsocket'] });
+
+const socket = io('http://localhost:3000/',
+  { transports: ['websocket', 'polling', 'flashsocket'] });
 
 const button = document.getElementById('buttonModal');
 button.addEventListener('click', () => {
@@ -39,14 +45,24 @@ socket.on('enterRoomAll', (arg) => {
   attPlayersName(arg.players);
   attResources();
   playButton();
+  playersPlaying();
 });
 
 socket.on('enterRoomPersonal', (arg) => { startingMyGame(arg) });
 
 socket.on('toPlay', (arg) => {
-  console.log(arg)
+  console.log(arg);
   startingGame(arg);
   attResources();
   playButton();
   updatePosition();
+  playersPlaying();
+  currentDice();
 });
+
+socket.on('err', (arg) => {
+  startingGame(arg);
+  attResources();
+  playButton();
+  playersPlaying();
+})

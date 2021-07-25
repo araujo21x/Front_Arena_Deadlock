@@ -4,14 +4,20 @@ import {
   getResourcesTeam2,
   getMyPlayer,
   getGameStatusGenerally,
-  getPlayers
+  getPlayers,
+  getDiceValueTeam1,
+  getDiceValueTeam2
 } from './localStorage.js';
 
 export function attPlayersName(players) {
   for (let i = 1; i <= 4; i++) {
     if (players[`player${i}`].playerName) {
-      document.getElementById(`namePlayer${i}`)
-        .innerHTML = players[`player${i}`].playerName;
+      const namePlayer = document.getElementById(`namePlayer${i}`)
+      namePlayer.innerHTML = players[`player${i}`].playerName;
+      const img = document.createElement('img');
+      img.id = `imgPlayer${i}`;
+      img.src = 'img/dicePlayer.png';
+      namePlayer.appendChild(img);
     }
   }
 }
@@ -58,12 +64,42 @@ export function playButton() {
   }
 }
 
-export function updatePosition(){
+export function updatePosition() {
   const player = getPlayers();
-  for(let i = 1; i <= 4; i++){
+  for (let i = 1; i <= 4; i++) {
     const piece = document.getElementById(`player${i}`);
-    const currentPosition = player[`player${i}`].currentPosition;
+    const currentPosition = player[`player${i}`].currentPosition < 25
+      ? player[`player${i}`].currentPosition : 25;
     const newPosition = document.getElementsByClassName(`zone_${i}_${currentPosition}`)[0];
     newPosition.appendChild(piece);
+  }
+}
+
+export function playersPlaying() {
+  const player = getPlayers();
+  for (let i = 1; i <= 4; i++) {
+    const display = player[`player${i}`].gameStatus !== 'wait' ? 'inline' : 'none';
+    document.getElementById(`imgPlayer${i}`).style.display = display;
+  }
+}
+
+export function currentDice() {
+  const diceValueTeam1 = getDiceValueTeam1();
+  const diceValueTeam2 = getDiceValueTeam2();
+  diceDisable();
+
+  if (diceValueTeam1) {
+    document.getElementById(`dice_1_${diceValueTeam1}`).style.display = 'inline';
+  }
+
+  if (diceValueTeam2) {
+    document.getElementById(`dice_2_${diceValueTeam2}`).style.display = 'inline';
+  }
+}
+
+function diceDisable() {
+  for (let i = 1; i <= 6; i++) {
+    document.getElementById(`dice_1_${i}`).style.display = 'none';
+    document.getElementById(`dice_2_${i}`).style.display = 'none';
   }
 }
