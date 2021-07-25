@@ -13,11 +13,11 @@ import {
   currentDice
 } from './game.js';
 
-// const socket = io('https://arenadead.herokuapp.com/',
-//   { transports: ['websocket', 'polling', 'flashsocket'] });
-
-const socket = io('http://localhost:3000/',
+const socket = io('https://arenadead.herokuapp.com/',
   { transports: ['websocket', 'polling', 'flashsocket'] });
+
+// const socket = io('http://localhost:3000/',
+//   { transports: ['websocket', 'polling', 'flashsocket'] });
 
 const button = document.getElementById('buttonModal');
 button.addEventListener('click', () => {
@@ -51,7 +51,6 @@ socket.on('enterRoomAll', (arg) => {
 socket.on('enterRoomPersonal', (arg) => { startingMyGame(arg) });
 
 socket.on('toPlay', (arg) => {
-  console.log(arg);
   startingGame(arg);
   attResources();
   playButton();
@@ -65,4 +64,14 @@ socket.on('err', (arg) => {
   attResources();
   playButton();
   playersPlaying();
-})
+  alert(arg.msg);
+});
+
+
+socket.on('winner', (arg) => {
+  startingGame(arg);
+  attResources();
+  playButton();
+  playersPlaying();
+  alert(`Vencedor: Jogador ${arg.playerWinner} da ${arg.teamWinner} `);
+});

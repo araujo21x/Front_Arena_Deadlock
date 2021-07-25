@@ -78,8 +78,10 @@ export function updatePosition() {
 export function playersPlaying() {
   const player = getPlayers();
   for (let i = 1; i <= 4; i++) {
-    const display = player[`player${i}`].gameStatus !== 'wait' ? 'inline' : 'none';
-    document.getElementById(`imgPlayer${i}`).style.display = display;
+    if(player[`player${i}`].gameStatus){
+      const display = player[`player${i}`].gameStatus !== 'wait' ? 'inline' : 'none';
+      document.getElementById(`imgPlayer${i}`).style.display = display;
+    }
   }
 }
 
