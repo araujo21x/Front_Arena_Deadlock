@@ -26,6 +26,7 @@ export function attResources() {
   const myPlayer = getMyPlayer();
   const resources = getResources();
   let myResources;
+  
   if (myPlayer === 'player1' || myPlayer === 'player2') {
     myResources = getResourcesTeam1();
   } else {

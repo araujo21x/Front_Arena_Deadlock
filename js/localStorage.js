@@ -1,4 +1,4 @@
-export function startingGame(data) {
+export function  startingGame(data) {
   localStorage.setItem('players', JSON.stringify(data.players));
   localStorage.setItem('gameStatusGenerally', data.gameStatusGenerally);
   localStorage.setItem('resources', JSON.stringify(data.resources));

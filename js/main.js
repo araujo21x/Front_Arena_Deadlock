@@ -64,14 +64,17 @@ socket.on('err', (arg) => {
   attResources();
   playButton();
   playersPlaying();
+  currentDice();
+  updatePosition();
   alert(arg.msg);
 });
-
 
 socket.on('winner', (arg) => {
   startingGame(arg);
   attResources();
   playButton();
   playersPlaying();
+  currentDice();
+  updatePosition();
   alert(`Vencedor: Jogador ${arg.playerWinner} da ${arg.teamWinner} `);
 });
