@@ -89,20 +89,20 @@ export function playersPlaying() {
 export function currentDice() {
   const diceValueTeam1 = getDiceValueTeam1();
   const diceValueTeam2 = getDiceValueTeam2();
+  const myTeam = getMyPlayer();
   diceDisable();
 
-  if (diceValueTeam1) {
+  if(myTeam === 'player1' || myTeam === 'player2' ){
     document.getElementById(`dice_1_${diceValueTeam1}`).style.display = 'inline';
-  }
-
-  if (diceValueTeam2) {
-    document.getElementById(`dice_2_${diceValueTeam2}`).style.display = 'inline';
+    document.getElementById('advDiceValue').innerHTML = diceValueTeam2;
+  }else{
+    document.getElementById(`dice_1_${diceValueTeam2}`).style.display = 'inline';
+    document.getElementById('advDiceValue').innerHTML = diceValueTeam1;
   }
 }
 
 function diceDisable() {
   for (let i = 1; i <= 6; i++) {
     document.getElementById(`dice_1_${i}`).style.display = 'none';
-    document.getElementById(`dice_2_${i}`).style.display = 'none';
   }
 }
