@@ -2,7 +2,9 @@ import {
   startingGame,
   startingMyGame,
   getMyPlayer,
-  getIdPlayer
+  getIdPlayer,
+  getPlayerName,
+  getIdRoom
 } from './localStorage.js';
 import {
   attPlayersName,
@@ -10,7 +12,8 @@ import {
   playButton,
   updatePosition,
   playersPlaying,
-  currentDice
+  currentDice,
+  attRoomCode
 } from './game.js';
 
 const socket = io('https://arenadead.herokuapp.com/',
@@ -18,26 +21,25 @@ const socket = io('https://arenadead.herokuapp.com/',
 
 // const socket = io('http://localhost:3000/',
 //   { transports: ['websocket', 'polling', 'flashsocket'] });
+attRoomCode();
+addPlayer();
 
-const button = document.getElementById('buttonModal');
-button.addEventListener('click', () => {
-  addPlayer();
-})
 const buttonPlay = document.getElementsByClassName('button_to_play')[0];
 buttonPlay.addEventListener('click', () => {
   toPlay();
 })
 
 function addPlayer() {
-  const name = document.getElementById('name').value
-  socket.emit('enterRoom', { idRoom: 'teste01', playerName: name });
-  document.getElementById('modal').style.display = 'none';
+  const playerName = getPlayerName();
+  const idRoom = getIdRoom();
+  socket.emit('enterRoom', { idRoom, playerName });
 }
 function toPlay() {
   const game = getMyPlayer();
   const idPlayer = getIdPlayer();
+  const idRoom = getIdRoom();
 
-  socket.emit('toPlay', { idRoom: 'teste01', idPlayer, game });
+  socket.emit('toPlay', { idRoom, idPlayer, game });
 }
 
 socket.on('enterRoomAll', (arg) => {

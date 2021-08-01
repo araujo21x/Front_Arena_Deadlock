@@ -14,6 +14,27 @@ export function startingMyGame(data) {
   localStorage.setItem('game', data.game);
 }
 
+export function openGame(idRoom, playerName){
+  localStorage.setItem('playerName', playerName);
+  localStorage.setItem('idRoom', idRoom);
+}
+
+export function getPlayerName(){
+  return localStorage.getItem('playerName');
+}
+
+export function setPlayerName(playerName){
+  localStorage.setItem('playerName', playerName);
+}
+
+export function setIdRoom(idRoom){
+  localStorage.setItem('idRoom', idRoom);
+}
+
+export function getIdRoom(){
+  return localStorage.getItem('idRoom');
+}
+
 export function getResources() {
   return JSON.parse(localStorage.getItem('resources'));
 }

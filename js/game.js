@@ -6,7 +6,8 @@ import {
   getGameStatusGenerally,
   getPlayers,
   getDiceValueTeam1,
-  getDiceValueTeam2
+  getDiceValueTeam2,
+  getIdRoom
 } from './localStorage.js';
 
 export function attPlayersName(players) {
@@ -99,6 +100,9 @@ export function currentDice() {
     document.getElementById(`dice_1_${diceValueTeam2}`).style.display = 'inline';
     document.getElementById('advDiceValue').innerHTML = diceValueTeam1;
   }
+}
+export function attRoomCode(){
+  document.getElementById('codeZoneIdRoom').innerHTML = getIdRoom();
 }
 
 function diceDisable() {
