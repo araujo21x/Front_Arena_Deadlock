@@ -77,7 +77,7 @@
   justify-content: center;
   grid-column: 1/ 5;
   grid-row: 41/ 45;
-  border: 1.5px solid var(--primaryColor);
+  border: 2px solid var(--incompatible);
 }
 
 .zone_1_2 {
@@ -167,7 +167,7 @@
   justify-content: center;
   grid-column: 41/ 45;
   grid-row: 41/ 45;
-  border: 1.5px solid var(--errorColor);
+  border: 2px solid var(--errorColor);
 }
 
 .zone_1_12 {
@@ -176,7 +176,7 @@
   justify-content: center;
   grid-column: 45/ 49;
   grid-row: 41/ 45;
-  border: 1.5px solid var(--errorColor);
+  border: 2px solid var(--errorColor);
 }
 
 .zone_1_13 {
@@ -302,7 +302,7 @@
   justify-content: center;
   grid-column: 1/ 5;
   grid-row: 45/ 49;
-  border: 1.5px solid var(--primaryColor);
+  border: 2px solid var(--incompatible);
 }
 
 .zone_2_2 {
@@ -392,7 +392,7 @@
   justify-content: center;
   grid-column: 41/ 45;
   grid-row: 45/ 49;
-  border: 1.5px solid var(--errorColor);
+  border: 2px solid var(--errorColor);
 }
 
 .zone_2_12 {
@@ -401,7 +401,7 @@
   justify-content: center;
   grid-column: 45/ 49;
   grid-row: 45/ 49;
-  border: 1.5px solid var(--errorColor);
+  border: 2px solid var(--errorColor);
 }
 
 .zone_2_13 {
@@ -525,7 +525,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1.5px solid var(--primaryColor);
+  border: 2px solid var(--incompatible);
   grid-column: 41/ 45;
   grid-row: 1/ 5;
 }
@@ -615,7 +615,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1.5px solid var(--errorColor);
+  border: 2px solid var(--errorColor);
   grid-column: 41/ 45;
   grid-row: 41/ 45;
 }
@@ -624,7 +624,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1.5px solid var(--errorColor);
+  border: 2px solid var(--errorColor);
   grid-column: 41/ 45;
   grid-row: 45/ 49;
 }
@@ -751,7 +751,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1.5px solid var(--primaryColor);
+  border: 2px solid var(--incompatible);
   grid-column: 45/ 49;
   grid-row: 1/ 5;
 }
@@ -841,7 +841,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1.5px solid var(--errorColor);
+  border: 2px solid var(--errorColor);
   grid-column: 45/ 49;
   grid-row: 41/ 45;
 }
@@ -850,7 +850,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1.5px solid var(--errorColor);
+  border: 2px solid var(--errorColor);
   grid-column: 45/ 49;
   grid-row: 45/ 49;
 }

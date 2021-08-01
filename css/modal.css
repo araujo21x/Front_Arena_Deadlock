@@ -72,8 +72,9 @@
 .textModal {
   text-align: justify;
   font-size: 3vh;
-  width: 96%;
+  width: 92%;
   height: 90%;
+  overflow: auto;
 }
 
 .miniModal .textModal {
@@ -108,6 +109,9 @@ input:focus{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.textModal ul li{
+  margin-bottom: 3%;
 }
 
 .miniModal button {

@@ -2,10 +2,11 @@ export default "Deadlock é o impasse que ocorre em situações em que mais de u
 
 export function rules() {
   return [
-    'regra 1',
-    'regra 2',
-    'regra 3',
-    'regra 4',
-    'regra 5'
+    'Só pode existir um jogador na zona crítica;',
+    'Todo recurso tem um valor numérico que o representa, o recurso é capturado pela equipe quando um dos jogadores tira um valor no dado referente ao valor do recurso;',
+    'Para andar é necessário o recurso pertencer a sua equipe ou ou disponível para captura;',
+    'Quando um jogador está na zona crítica, os jogadores atrás da zona crítica não podem se mexer;',
+    'Deadlock: se você tirou um valor e o recurso é da equipe inimiga e aconteceu o mesmo com a equipe inimiga, ambas equipes perdem os recursos e os jogadores da rodada voltam para o começo;',
+    'Deadlock: se você e o outro jogador tem o mesmo valor no dado e esse recurso está disponível para captura, ambas equipes perdem os recursos e os jogadores da rodada voltam para o começo.'
   ];
 };
