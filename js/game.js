@@ -27,7 +27,7 @@ export function attResources() {
   const myPlayer = getMyPlayer();
   const resources = getResources();
   let myResources;
-  
+
   if (myPlayer === 'player1' || myPlayer === 'player2') {
     myResources = getResourcesTeam1();
   } else {
@@ -80,7 +80,7 @@ export function updatePosition() {
 export function playersPlaying() {
   const player = getPlayers();
   for (let i = 1; i <= 4; i++) {
-    if(player[`player${i}`].gameStatus){
+    if (player[`player${i}`].gameStatus) {
       const display = player[`player${i}`].gameStatus !== 'wait' ? 'inline' : 'none';
       document.getElementById(`imgPlayer${i}`).style.display = display;
     }
@@ -93,16 +93,29 @@ export function currentDice() {
   const myTeam = getMyPlayer();
   diceDisable();
 
-  if(myTeam === 'player1' || myTeam === 'player2' ){
+  if (myTeam === 'player1' || myTeam === 'player2') {
     document.getElementById(`dice_1_${diceValueTeam1}`).style.display = 'inline';
     document.getElementById('advDiceValue').innerHTML = diceValueTeam2;
-  }else{
+  } else {
     document.getElementById(`dice_1_${diceValueTeam2}`).style.display = 'inline';
     document.getElementById('advDiceValue').innerHTML = diceValueTeam1;
   }
 }
-export function attRoomCode(){
+
+export function attRoomCode() {
   document.getElementById('codeZoneIdRoom').innerHTML = getIdRoom();
+}
+
+export function verifyWinner() {
+  const players = getPlayers();
+  players.forEach(element => {
+    if (element.currentPosition >= 25) {
+      const team = element.game === 'player1' || element.game === 'player2'
+        ? 'Equipe 01' : 'Equipe 02';
+
+      alert(`Ganhador !!! Jogador ${element.playerName} da ${team}`);
+    }
+  });
 }
 
 function diceDisable() {

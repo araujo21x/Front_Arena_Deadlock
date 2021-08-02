@@ -13,7 +13,8 @@ import {
   updatePosition,
   playersPlaying,
   currentDice,
-  attRoomCode
+  attRoomCode,
+  verifyWinner
 } from './game.js';
 
 const socket = io('https://arenadead.herokuapp.com/',
@@ -59,6 +60,7 @@ socket.on('toPlay', (arg) => {
   updatePosition();
   playersPlaying();
   currentDice();
+  verifyWinner();
 });
 
 socket.on('err', (arg) => {
