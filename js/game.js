@@ -108,14 +108,14 @@ export function attRoomCode() {
 
 export function verifyWinner() {
   const players = getPlayers();
-  players.forEach(element => {
-    if (element.currentPosition >= 25) {
-      const team = element.game === 'player1' || element.game === 'player2'
+  for(let i=1;i<=4; i++){
+    if (players[`player${i}`].currentPosition >= 25) {
+      const team = players[`player${i}`].game === 'player1' || players[`player${i}`].game === 'player2'
         ? 'Equipe 01' : 'Equipe 02';
 
-      alert(`Ganhador !!! Jogador ${element.playerName} da ${team}`);
+      alert(`Ganhador !!! Jogador ${players[`player${i}`].playerName} da ${team}`);
     }
-  });
+  }
 }
 
 function diceDisable() {
