@@ -1035,3 +1035,19 @@
   list-style-type: decimal;
 }
 
+@media only screen and (max-width: 700px){
+  #subtitlesTitle{
+    font-size: 1rem;
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    font-family: 'Mulish', sans-serif;
+  }
+  
+  .subtitlesUl{
+    margin-top: 5%;
+    font-family: 'Mulish', sans-serif;
+    font-size: 0.7rem;
+    list-style-type: decimal;
+  }
+}
