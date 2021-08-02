@@ -71,6 +71,7 @@ socket.on('err', (arg) => {
   currentDice();
   updatePosition();
   alert(arg.msg);
+  verifyWinner();
 });
 
 socket.on('winner', (arg) => {
