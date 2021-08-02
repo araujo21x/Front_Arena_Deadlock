@@ -1021,7 +1021,7 @@
 }
 
 #subtitlesTitle{
-  font-size: 1.5rem;
+  font-size: 4vh;
   margin-top: 2%;
   display: flex;
   justify-content: center;
@@ -1031,11 +1031,11 @@
 .subtitlesUl{
   margin-top: 5%;
   font-family: 'Mulish', sans-serif;
-  font-size: 1rem;
+  font-size: 3vh;
   list-style-type: decimal;
 }
 
-@media only screen and (max-width: 700px){
+/* @media only screen and (max-width: 700px){
   #subtitlesTitle{
     font-size: 1rem;
     margin-top: 2%;
@@ -1050,4 +1050,4 @@
     font-size: 0.7rem;
     list-style-type: decimal;
   }
-}
+} */
