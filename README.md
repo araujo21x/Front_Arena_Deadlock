@@ -1,7 +1,8 @@
 # Front-end - Arena Deadlock
 
+<h3 align="center">🚧 Software em construção 🚧</h3>
 <p align="center">
-  
+   
   <img width="auto" height="23em" src="https://img.shields.io/badge/JavaScript-323330?style=flat&logo=javascript&logoColor=F7DF1E" >
   <img width="auto" height="23em" src="https://img.shields.io/badge/HTML-323330?style=flat&&logo=html5&logoColor=red">
   <img width="auto" height="23em" src="https://img.shields.io/badge/CSS-323330?&style=flat&&logo=css3&logoColor=blue">
@@ -20,34 +21,25 @@
 ___
 # Sobre
 
+<p align="center">![1f6a7](https://user-images.githubusercontent.com/29488890/143720801-e35cce4e-7bfa-44a7-9030-6be3a8ced6a6.png)
+
+  <img width="auto" height="220em" src="https://raw.githubusercontent.com/araujo21x/Front_Arena_Deadlock/main/img/GitHubImgReadme/arenaDeadlock01.png">
+  <img width="auto" height="220em" src="https://raw.githubusercontent.com/araujo21x/Front_Arena_Deadlock/main/img/GitHubImgReadme/arenaDeadlock02.png">
+</p>
 <br> 
-<p align="justify"> Inicialmente um projeto para disciplina Software Educacional, mas a ideia evoluiu e virou meu trabalho de TCC(trabalho de conclusão de curso), a ideia é desenvolver um simulador drag and drop (arrastar e soltar) com temática de montagem e manutenção em computadores. Desta maneira foi desenvolvido um sistema web, para ser de fácil acesso e funcional independente da plataforma, mas até o momento a versão mobile do site não está funcional.</p>
-<p align="justify">Para acessar e testar o simulador basta clicar neste <a href="https://front-arena-deadlock.vercel.app/" target="_blank">link</a></p>
+<p align="justify">Para acessar e testar o jogo basta clicar neste <a href="https://front-arena-deadlock.vercel.app/" target="_blank">link</a>, mas é necessário 4 jogadores para a partida funcionar </p>
 
-<p align="center">
-  <img width="auto" height="200em" src="https://raw.githubusercontent.com/araujo21x/Front_Arena_Deadlock/main/img/GitHubImgReadme/arenaDeadlock01.png">
-  <img width="auto" height="200em" src="https://raw.githubusercontent.com/araujo21x/Front_Arena_Deadlock/main/img/GitHubImgReadme/arenaDeadlock02.png">
-</p>
+<p align="justify">Arena deadlocké um jogo de tabuleiro analogico desenvolvidos por mim e alguns amigos do graduação, apartir dessa versão analogica eu construir a versão digital um sistema web. De maneira resumida o jogo necessita de 4 jogadores simultâneos, que são divididos em duas equipes, equipe “A” e “B”. Uma equipe fica nos campos verticais e a outra nos campos horizontais. Cada jogador tem como objetivo atravessar os 25 campos para conseguir a vitória do seu time. No centro do tabuleiro, os campos verticais e horizontais se encontram e essa área é chamada de seção crítica. Assim, só pode existir um jogador por vez nessa zona e, caso tenha um, os demais participantes que estão em campos anteriores a seção crítica não podem se mover até esse jogador sair.</p>
 
-<p align="justify">
-A primeira imagem(canto superior esquerdo) é a tela inicial, nela possui dois botões, cada um para acessar a simulação de acordo com o modo desejado, que são:
-Simulador - Treino = Nesse modo o sistema auxilia com algumas instruções e mensagens de erros sobre a conexão das peças e proibindo a montagem de um computador com peças que não funcionam.
-</p>
-<p align="justify">
-Simulador - Avaliativo = Nesse modo o sistema não auxilia e todos os erros são salvos guardados, quando o aluno gera o relatório, um com os erros vai para o email do professor e outro apenas com informações da peça é gerado para o aluno baixar.
-</p>
-<p align="justify">
-A segunda imagem (canto superior direito) é a tela inicial de simulação sem nenhuma peça, nela apenas a aba de placa mãe está liberada(em azul) e o restante bloqueada(em vermelho). Desta maneira a pessoa coloca a placa mãe e é liberada todas as abas menos a do cooler, pois para liberar é necessário colocar o processador. Desta maneira vamos para a imagem 3 (canto inferior esquerdo) onde temos um computador com a primeira memória, processador, cooler e placa  mãe. o aluno também já fez a parte de cabeamento do cooler.
-</p>
-<p align="justify">
-Na iamgem 4  (canto inferior direito) temos o modo avaliação, ao contrário da imagem 3 não tem borda rosa e não aparece as mensagens de erros, entre outros auxílios do sistema.
-</p>
-<p align="justify">
-Quando vai para adição de peças que se encaixam no gabinete e não na placa mãe a imagem do simulador muda para a imagem 5 (última imagem, que está centralizada) e a mesma mudança ocorre quando volta para aba de alguma peça que se encaixa na placa mãe.
-</p>
-<p align="justify">
-Caso a pessoa feche o navegador não tem problema, quando acessar a página e o modo de jogo que estava anteriormente o sistema vai retornar do ponto que estava.
-</p>
+<p align="justify">Cada rodada é dividida em dois turnos. Em cada turno um jogador de cada equipe vai jogar o dado e no turno seguinte os outros dois jogadores. A face do dado que cada jogador tira em seu turno serve para indicar o número de campos que ele vai movimentar-se e recolher um recursos para seu time de acordo com a face do dado que tirou.</p>
+
+<p align="justify">No jogo existem 6 recursos, cada um com sua numeração que é vinculada com uma face do dado. Os recursos iniciam na Zona de recursos, área no canto inferior esquerdo da primeira imagem apresentada. Quando um recurso está nessa zona, ele pode ser recolhido pelo time que tirou a face do dado equivalente ao número do recurso e com isso o recurso vai para a área de recursos daquele time. O jogador da equipe só pode movimentar-se, se o recurso estiver disponível na zona de recursos ou pertencer a sua equipe. Desta maneira se o recurso pertencer a equipe adversária ele não vai mover-se. Os recursos também podem causar o deadlock nas seguintes situações:</p>
+<ul>
+  <li><p align="justify">Caso o recurso esteja na zona de recursos e dois jogadores tirarem o valor do dado que o represente em um turno; </p></li>
+  <li><p align="justify">No turno se cada jogador tira um valor no dado de um recurso que pertence a equipe adversária.</p></li>
+</ul>
+<p align="justify">Quando o deadlock acontece, todos os recursos retornam para o status de disponível e os jogadores do turno voltam para o  início do jogo. A principal diferença do software desenvolvido para o jogo analógico é que jogo analógico possui um modo que todos os jogadores voltam para o início do jogo ao ocorrer o deadlock.</p>
+<p align="justify">Quanto mais recurso um um time retém, melhor são as probabilidades de se movimentar e evitar o deadlock na partida. Entretanto, para vencer a partida, é necessário sorte, já que a cada turno pode acontecer deadlock e os jogadores do turno voltam para o começo e perdem os recursos do time.</p>
 
 ---
 # Pré-Requisito
@@ -71,7 +63,7 @@ $ git clone https://github.com/araujo21x/Front_Arena_Deadlock.git
 
 # Tecnologias 
 
-<p align="justify"> Foi se utilizado JavaScript Vanilla, HTML 5, CSS 3 e Socket.io. <strong>Não</strong> se utilizou nenhum framework JS.</p>
+<p align="justify"> Foi-se utilizado JavaScript Vanilla, HTML 5, CSS 3 e Socket.io. <strong>Não</strong> se utilizou nenhum framework JS.</p>
 
 ___
 # Autores 
