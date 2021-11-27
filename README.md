@@ -21,7 +21,7 @@
 ___
 # Sobre
 
-<p align="center">![1f6a7](https://user-images.githubusercontent.com/29488890/143720801-e35cce4e-7bfa-44a7-9030-6be3a8ced6a6.png)
+<p align="center">
 
   <img width="auto" height="220em" src="https://raw.githubusercontent.com/araujo21x/Front_Arena_Deadlock/main/img/GitHubImgReadme/arenaDeadlock01.png">
   <img width="auto" height="220em" src="https://raw.githubusercontent.com/araujo21x/Front_Arena_Deadlock/main/img/GitHubImgReadme/arenaDeadlock02.png">
