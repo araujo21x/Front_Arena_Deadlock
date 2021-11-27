@@ -25,11 +25,8 @@ ___
 <p align="justify">Para acessar e testar o simulador basta clicar neste <a href="https://front-arena-deadlock.vercel.app/" target="_blank">link</a></p>
 
 <p align="center">
-  <img width="auto" height="200em" src="https://raw.githubusercontent.com/araujo21x/SM-Computadores/main/assets/img/GitHubImgReadme/smComp01.png">
-  <img width="auto" height="200em" src="https://raw.githubusercontent.com/araujo21x/SM-Computadores/main/assets/img/GitHubImgReadme/smComp02.png">
-  <img width="auto" height="200em" src="https://raw.githubusercontent.com/araujo21x/SM-Computadores/main/assets/img/GitHubImgReadme/smComp03.png">
-  <img width="auto" height="200em" src="https://raw.githubusercontent.com/araujo21x/SM-Computadores/main/assets/img/GitHubImgReadme/smComp04.png">
-  <img width="auto" height="200em" src="https://raw.githubusercontent.com/araujo21x/SM-Computadores/main/assets/img/GitHubImgReadme/smComp05.png">
+  <img width="auto" height="200em" src="https://raw.githubusercontent.com/araujo21x/Front_Arena_Deadlock/main/img/GitHubImgReadme/arenaDeadlock01.png">
+  <img width="auto" height="200em" src="https://raw.githubusercontent.com/araujo21x/Front_Arena_Deadlock/main/img/GitHubImgReadme/arenaDeadlock02.png">
 </p>
 
 <p align="justify">
@@ -74,7 +71,7 @@ $ git clone https://github.com/araujo21x/Front_Arena_Deadlock.git
 
 # Tecnologias 
 
-<p align="justify"> Foi se utilizado JavaScript Vanilla, HTML 5 e CSS 3. <strong>Não</strong> se utilizou nenhum framework JS, mas se utilizou o Socket.io.</p>
+<p align="justify"> Foi se utilizado JavaScript Vanilla, HTML 5, CSS 3 e Socket.io. <strong>Não</strong> se utilizou nenhum framework JS.</p>
 
 ___
 # Autores 
